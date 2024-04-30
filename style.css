@@ -1,0 +1,126 @@
+
+:root {
+    --violet: rgba(138, 43, 226, 1);
+    --dark-violet: indigo;
+}
+
+section {
+    padding: 50px 0 100px;
+}
+
+/*style*/
+.bg-violet{
+    background-color: var(--violet);
+}
+
+.bg-darkviolet{
+    background-color: var(--dark-violet);
+}
+
+.text-darkviolet{
+    color: var(--dark-violet);
+}
+
+.border-violet{
+    border: 2px solid var(--violet);
+}
+
+a.bg-violet:hover{
+    background-color: var(--dark-violet);
+}   
+
+a.border-violet:hover {
+    border: 2px solid var(--dark-violet) !important;
+}
+
+/* navigasi */
+.navbar-nav a {
+    text-decoration: none;
+    color: rgba(138, 43, 226, 0.8) !important;
+    border-bottom: 2px solid rgba(138, 43, 226, 0.3) !important;
+}
+
+/* Hero section */
+#hero-section {
+    background : url(image/foto\ 1.jpg) no-repeat;
+    background-size: 500px;
+    background-repeat: repeat;
+    height: 500px;
+    position: relative;
+    padding: 0;
+}
+
+#hero-section::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(138, 43, 226, 0.6);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#hero-section .row{
+    position: absolute;
+    z-index: 1;
+}
+
+/*values product*/
+#values-products .row, 
+#awards .row {
+    row-gap: 3rem;
+}
+
+/*award*/
+#awards img {
+    height: 150px;
+}
+
+/* buy */
+#buy .links{
+    column-gap: 2rem;
+}
+
+/* footer info */
+#footer-info {
+    background: rgba(138, 43, 226, 0.075);
+}
+
+#footer-info .sosmed-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#footer-info a {
+    color: rgba(138, 43, 226, 0.8) !important;
+}
+
+#footer a:hover, nav .links a:hover{
+    color: var(--dark-violet) !important;
+}
+
+/* mobile */
+@media (max-width: 768px){
+    #buy .links {
+        row-gap: 1rem;
+    }
+    
+    #buy .links a {
+        width: 200px;
+    }
+}
+
+/*desktop*/
+@media(min-width: 992px) {
+    /*values product*/
+    #values-products img {
+        height: auto;
+        width: 100%;
+    }
+    #values-products .detail {
+        width: 100%;
+    }
+}
